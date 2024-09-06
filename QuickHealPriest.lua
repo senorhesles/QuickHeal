@@ -170,7 +170,7 @@ function QuickHeal_Priest_FindHealSpellToUse(Target, healType, multiplier, force
             -- Not in combat or target is healthy so use the closest available mana efficient healing
             QuickHeal_debug(string.format("Not in combat or target healthy or no flash heal available, will use closest available LH, H or GH (not FH)"))
             if Health < QuickHealVariables.RatioFull then
-                SpellID = SpellIDsLH[1]; HealSize = 53*shMod+healMod15*PF1; -- Default to LH
+                SpellID = SpellIDsLH[1]; HealSize = 53*shMod+healMod15*PF1; -- Default to GH1
                 if healneed > (  84*shMod+healMod20*PF4) *k and ManaLeft >= 370*ihMod and maxRankGH >=1 and downRankNH >= 8  then SpellID = SpellIDsGH[1]; HealSize =  956*shMod+healMod30      end
                 if healneed > ( 154*shMod+healMod25*PF10)*K and ManaLeft >= 370*ihMod and maxRankGH >=1 and downRankNH >= 8  then SpellID = SpellIDsGH[1]; HealSize =  956*shMod+healMod30      end
                 if healneed > ( 318*shMod+healMod30*PF18)*K and ManaLeft >= 370*ihMod and maxRankGH >=1 and downRankNH >= 8  then SpellID = SpellIDsGH[1]; HealSize =  956*shMod+healMod30      end
